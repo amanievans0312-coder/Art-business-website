@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Art Business</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --text: #f2f2f2;
+      --accent: #c69cff;
+      --muted: #9a9a9a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: radial-gradient(circle at top, #1b1b1b, #000);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    section {
+      padding: 6rem 10%;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about h2,
+    .gallery h2,
+    .services h2,
+    .contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      color: var(--muted);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      background: rgba(0,0,0,0.7);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .services ul {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .services li {
+      padding: 1rem 0;
+      border-bottom: 1px solid #222;
+      color: var(--muted);
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin-top: 2rem;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: #111;
+      border: 1px solid #333;
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <h1>Your Name / Studio</h1>
+    <p>Art that tells stories. Creation with intention.</p>
+    <a href="#gallery" class="btn">View Work</a>
+  </div>
+</header>
+
+<section class="about">
+  <div>
+    <h2>About the Artist</h2>
+    <p>
+      I create visual narratives rooted in emotion, identity, and transformation.
+      Each piece is an exploration of form, memory, and meaning.
+    </p>
+  </div>
+  <div>
+    <p>
+      My work spans digital art, mixed media, and conceptual design.
+      Available for commissions, exhibitions, and collaborations.
+    </p>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2>Selected Works</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19" alt="Artwork">
+      <span>Untitled I</span>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305" alt="Artwork">
+      <span>Memory Study</span>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Artwork">
+      <span>Fragments</span>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <h2>Services</h2>
+  <ul>
+    <li>Custom Art Commissions</li>
+    <li>Brand & Album Artwork</li>
+    <li>Exhibition & Installation Design</li>
+    <li>Creative Consulting</li>
+  </ul>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email Address">
+    <textarea rows="5" placeholder="Tell me about your project"></textarea>
+    <button class="btn" type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 Your Art Business · All Rights Reserved
+</footer>
+
+</body>
+</html>
